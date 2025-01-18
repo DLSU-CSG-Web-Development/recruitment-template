@@ -3,13 +3,15 @@ export default class Enlistment {
 
     constructor(container, courses, maxEnrollment = 9) {
         
-        this.maxEnrollment = 9;
-
         this.onEnlist = null;
         this.onDrop = null;
         this.onFull = null;
 
-        this.root = document.querySelector(container);
+        if (typeof container === 'string') {
+            this.root = document.querySelector(container);
+        } else {
+            this.root = container;
+        }
 
         this.courses = courses;
         this.enlistedCourses = [];
@@ -21,7 +23,7 @@ export default class Enlistment {
         this.root.appendChild(this.enlistedCoursesDiv);
 
         this.renderCourses();
-        
+
     }
 
     getTotalUnits() {
@@ -48,7 +50,10 @@ export default class Enlistment {
         this.enlistedCourses.forEach(courseId => {
             const course = this.courses.find(c => c.id === courseId);
             if (course) {
-                this.renderCourseItem(this.enlistedCoursesDiv, course, 'Drop', () => this.drop(course.id));
+                this.renderCourseItem(
+                    this.enlistedCoursesDiv, 
+                    course, 
+                    'Drop', () => this.drop(course.id));
             }
         });
     }
@@ -85,8 +90,17 @@ export default class Enlistment {
     }
 
     enlist(courseId) {
-        console.log(courseId + ' is enlisted ');
+
         if (!this.enlistedCourses.includes(courseId)) {
+
+            const { units } = this.courses.find(
+                course => course.id === courseId);
+            
+            if (this.getTotalUnits() + units > this.maxEnrollment) {
+                this.onFull();
+                return;
+            }
+
             this.enlistedCourses.push(courseId);
             this.renderCourses();
         }

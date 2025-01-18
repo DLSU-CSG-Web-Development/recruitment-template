@@ -1,49 +1,35 @@
 import Enlistment from './Enlistment.js/Enlistment.js'
 
-const root = document.getElementById('root');
 const courses = [
     /**
      * TODO: Populate this list with the following course offerings:
      * 
      * - CCPROG1 (Section S15)
+     *   Name: Introductory Programming in C
+     *   Units: 3
+     *   Schedule: MH 9:00 AM - 10:30 AM
+     * 
      * - CCPROG1 (Section S16)
+     *   Name: Introductory Programming in C
+     *   Units: 3
+     *   Schedule: TF 1:00 PM - 3:00 PM
+     * 
      * - CCDSALG (Section S11)
+     *   Name: Data Structures and Algorithms
+     *   Units: 3
+     *   Schedule: TF 9:00 AM - 10:30 AM
+     * 
      * - CCDSALG (Section S12)
+     *   Name: Data Structures and Algorithms
+     *   Units: 3
+     *   Schedule: MH 1:00 PM - 3:00 PM
      */
-
-    {
-        id: 'CCPROG1-S15',
-        name: 'Programming 1',
-        units: 3,
-        schedule: 'MH 9:00 AM - 10:30 AM'
-    },
-    {
-        id: 'CCPROG1-S16',
-        name: 'Programming 1',
-        units: 3,
-        schedule: 'TF 1:00 PM - 3:00 PM'
-    },
-    {
-        id: 'CCDSALG-S11',
-        name: 'Data Structures and Algorithms',
-        units: 3,
-        schedule: 'MH 10:30 AM - 12:00 PM'
-    },
-    {
-        id: 'CCDSALG-S12',
-        name: 'Data Structures and Algorithms',
-        units: 3,
-        schedule: 'TF 3:00 PM - 5:00 PM'
-    },
-    {
-        id: 'CCAPDEV-S18',
-        name: 'Web Application Development',
-        units: 3,
-        schedule: 'WS 1:00 PM - 2:30 PM'
-    }
 ];
 
-const courseRender = new Enlistment('#root', courses);
+const root = document.getElementById('root');
+const courseRender = new Enlistment(
+    // TODO: Initialize the enlistment render object. Assume max enrollment is 6.
+);
 
 courseRender.onEnlist = (courseId) => {
     /**
