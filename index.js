@@ -9,20 +9,15 @@ const courses = [
      *   Units: 3
      *   Schedule: MH 9:00 AM - 10:30 AM
      * 
-     * - CCPROG1 (Section S16)
-     *   Name: Introductory Programming in C
+     * - CCAPDEV (Section S16)
+     *   Name: Web Application Development
      *   Units: 3
      *   Schedule: TF 1:00 PM - 3:00 PM
      * 
-     * - CCDSALG (Section S11)
+     * - CCDSALG (Section S17)
      *   Name: Data Structures and Algorithms
      *   Units: 3
      *   Schedule: TF 9:00 AM - 10:30 AM
-     * 
-     * - CCDSALG (Section S12)
-     *   Name: Data Structures and Algorithms
-     *   Units: 3
-     *   Schedule: MH 1:00 PM - 3:00 PM
      */
 ];
 
