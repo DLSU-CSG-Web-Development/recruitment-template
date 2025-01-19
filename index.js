@@ -23,7 +23,9 @@ const courses = [
 
 const root = document.getElementById('root');
 const courseRender = new Enlistment(
-    // TODO: Initialize the enlistment render object. Assume max enrollment is 6.
+    /**
+     * TODO: Initialize the enlistment render object. Assume max enrollment is 6.
+     */
 );
 
 courseRender.onEnlist = (courseId) => {
