@@ -31,8 +31,6 @@ In your JavaScript file (script.js or similar), initialize an instance of
 the Enlistment class:
 
 ```js
-Copy
-Edit
 import Enlistment from './Enlistment.js';
 
 const courses = [

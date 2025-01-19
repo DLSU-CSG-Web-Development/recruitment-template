@@ -59,7 +59,6 @@ Before wrapping up, make sure you can check these off:
 - [ ] The course list loads dynamically.
 - [ ] The rendering library works correctly with the data.
 - [ ] Modals appear correctly on enlistment and dropping.
-- [ ] Code is structured, readable, and well-commented.
 - [ ] (Bonus) Additional features enhance UX or enforce business logic.
 
 ## 📤 Submission & Evaluation
