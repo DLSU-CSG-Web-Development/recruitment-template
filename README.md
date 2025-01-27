@@ -31,10 +31,10 @@ even if the current units go beyond the maximum allowed units.
 
 This isn't just about getting the code to work! In fact, the final outcome matters
 less than the following:
-- Your Thought Process - Explain why you made certain choices
-- Debugging Skills - How do you approach and fix issues?
+- Learning Agility - How do you manage unfamiliar codebases and technologies?
 - Resourcefulness & Adaptability - How do you leverage documentation and AI tools 
 responsibly?
+- Your Thought Process - Explain why you made certain choices
 - Communication Skills - How thoroughly do you communicate and ask clarifying 
 questions?
 
